@@ -155,7 +155,7 @@ public class SignUp extends JFrame {
                         JOptionPane.ERROR_MESSAGE);
             }
         }catch (SQLException e){
-            System.out.println("Sign Up unsuccessful!");
+            System.out.println("SQL Error");
             e.printStackTrace();
         }finally{
             Arrays.fill(password,' ');

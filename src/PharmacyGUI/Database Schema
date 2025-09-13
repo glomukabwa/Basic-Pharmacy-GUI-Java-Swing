@@ -1,0 +1,13 @@
+//Drug Table
+USE pharmacydb;
+CREATE TABLE drugs (
+id INT AUTO_INCREMENT PRIMARY KEY,
+dname VARCHAR(100) NOT NULL,
+duse VARCHAR(100) NOT NULL,
+damount VARCHAR(100) NOT NULL,
+dateofpurchase DATE NOT NULL,
+pharmacistID INT,
+FOREIGN KEY (pharmacistID) REFERENCES pharmacists(id)
+ON UPDATE CASCADE
+ON DELETE SET NULL
+);
