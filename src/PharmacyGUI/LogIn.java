@@ -99,19 +99,19 @@ public class LogIn extends JFrame{
             stmt.setString(2,pass);
 
             ResultSet result = stmt.executeQuery();//Notice that we are using executeQuery() here bcz its selection. Any other uses executeUpdate()
-            //What result.next() means:
-            //When you run a query in JDBC (like SELECT ...), you get back a ResultSet.
-            //Think of it like a cursor over a table of rows returned by your query.
-            //Initially, the cursor is before the first row.
-            //result.next() moves the cursor forward one row, and returns:
-            //true → if there was a row to move to.
-            //false → if there are no more rows.
-            //So in login:
-            //If the query found a user → result.next() will be true.
-            //If no user matches → result.next() will be false.
-            //That’s how you know if login should succeed or fail.
-            //The checking happens in the query cz if it returns nothing, that means the password or email is incorrect
             if(result.next()){
+                //What result.next() means:
+                //When you run a query in JDBC (like SELECT ...), you get back a ResultSet.
+                //Think of it like a cursor over a table of rows returned by your query.
+                //Initially, the cursor is before the first row.
+                //result.next() moves the cursor forward one row, and returns:
+                //true → if there was a row to move to.
+                //false → if there are no more rows.
+                //So in login:
+                //If the query found a user → result.next() will be true.
+                //If no user matches → result.next() will be false.
+                //That’s how you know if login should succeed or fail.
+                //The checking happens in the query cz if it returns nothing, that means the password or email is incorrect
                 System.out.println("Log In successful");
                 JOptionPane.showMessageDialog(null,//This part is known as the parent component.See more info below
                         "Log In successful!",

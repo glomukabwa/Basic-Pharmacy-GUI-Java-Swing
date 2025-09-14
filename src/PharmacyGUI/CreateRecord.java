@@ -16,10 +16,7 @@ import java.util.Date;
 public class CreateRecord extends JFrame {
     JLabel lblEnterD,lblDname, lblDuse, lblDamount, lblDate, lblPharcmacist;
     JTextField txtDname, txtDuse, txtDamount, txtPharmacist;
-
-
-
-    JButton btnCancel,btnAdd;
+    JButton btnClear,btnCancel,btnAdd;
 
     public CreateRecord(){
         super("Create Drug Records");
@@ -43,6 +40,7 @@ public class CreateRecord extends JFrame {
         txtDamount = new JTextField(20);
         //txtDate = new JTextField(20);
         txtPharmacist = new JTextField(20);
+        btnClear = new JButton("Clear");
         btnCancel = new JButton("Cancel");
         btnAdd = new JButton("Add");
 
@@ -100,9 +98,13 @@ public class CreateRecord extends JFrame {
         midPanel.add(InM4);
         midPanel.add(InM5);
 
+        lowPanel.add(Box.createHorizontalGlue());
+        lowPanel.add(btnClear);
+        lowPanel.add(Box.createHorizontalStrut(20));
         lowPanel.add(btnCancel);
-        lowPanel.add(Box.createHorizontalStrut(50));
+        lowPanel.add(Box.createHorizontalStrut(100));
         lowPanel.add(btnAdd);
+        lowPanel.add(Box.createHorizontalGlue());
 
         allPanels.add(Box.createVerticalGlue());
         allPanels.add(topPanel);
@@ -111,6 +113,16 @@ public class CreateRecord extends JFrame {
         allPanels.add(Box.createVerticalGlue());
 
         add(allPanels);
+
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                txtDname.setText("");
+                txtDuse.setText("");
+                txtDamount.setText("");
+                txtPharmacist.setText("");
+            }
+        });
 
         btnCancel.addActionListener(new ActionListener() {
             @Override
