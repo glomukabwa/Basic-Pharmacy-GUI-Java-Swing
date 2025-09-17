@@ -139,7 +139,7 @@ public class CreateRecord extends JFrame {
                     //Retrieving the date you get from date picker:
                     Date utilDate = datePicker.getDate();//You use this method to retrieve it. getDate() returns a util.Date
                     //You have to convert a util.Date to an sql.Date which is now accepteptable by sql
-                    java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());//getTime() is the right method to use. It returns the date and exact time in milliseconds that the record was inserted and then sql.Date takes the date from all the info brought by getTime()
+                    java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());//getTime() is the right method to use. It returns the exact time in milliseconds that the record was inserted(time from 1 Jan, 1970) and then sql.Date takes the date from all the info brought by getTime()
 
                     //Converting the Pharmacist Id to an Int cz it's an int in the Database:
                     int pharmId = Integer.parseInt(txtPharmacist.getText());
