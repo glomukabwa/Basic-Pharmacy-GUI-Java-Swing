@@ -20,12 +20,14 @@ public class DBConnection {
     private static final String user = "root";
     private static final String password = "L@ur3nceangelina";
 
-    public static Connection getConnection(){//This is also static so that the methods don't belong to objects created but to a class
+    public static Connection getConnection(){//This is also static so that the methods don't belong to objects created through this method but to DBConnection class
         //So instead of
         //DBConnection db = new DBConnection();
         //Connection conn = db.getConnection();
         //You'll do:
         //Connection conn = DatabaseConnection.getConnection();
+        //The reason we specify Connection before getConnection() is to tell the compiler the return type of this method is a connection object that can be used for the rest of the code(to make PrepareStatement etc)
+        //Remember the way eg for a method that is returning String, u'd do public String getString(String name = "Gloria"...return name; ) That is the same concept here. It returns a connection object and then I'll use it in the other pages to access methods that come with Connection like PrepareStatement
         Connection conn = null;//Apparently this helps with safety.So that if the connection has an issue, we can always fall on this. This also allows us to access it later if we want to use a finally block
         try{
             conn = DriverManager.getConnection(url,user,password);

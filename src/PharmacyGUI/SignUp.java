@@ -134,7 +134,7 @@ public class SignUp extends JFrame {
             stmt.setString(1,fname);
             stmt.setString(2,lname);
             stmt.setString(3,email);
-            String pass = new String(password);//You do this cz PreparedStatement only accepts Strings
+            String pass = new String(password);//You do this cz PreparedStatement doesn't have a method for setting characters plus I want my password to appear as a word
             stmt.setString(4,pass);
 
             //Ensuring data has been entered by user:
