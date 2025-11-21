@@ -14,7 +14,8 @@ This is a simple Pharmacy GUI created using Swing. It implements the CRUD functi
 - MySQL<br>
 
 ## Future Improvements
-- Connect the different pages of the application
+- A centralized dashboard to replace the need for different pages for functionalities
+- An admin dashboard to manage employees and all drug info
 
 ## Demo Pictures
 - Welcome:<br><br> <img width="436" height="448" alt="image" src="https://github.com/user-attachments/assets/2ba59225-59a8-45fc-a03a-12382a9e7c1b" />
@@ -23,6 +24,7 @@ This is a simple Pharmacy GUI created using Swing. It implements the CRUD functi
 - Create Records:<br><br> <img width="581" height="592" alt="image" src="https://github.com/user-attachments/assets/cef5080c-af70-4cc2-abb9-5b6c9f7e2871" />
 - Search and Update:<br><br> <img width="732" height="817" alt="image" src="https://github.com/user-attachments/assets/cdf3237c-d734-409a-a3f6-7dfe9624fc95" />
 - Delete Record:<br><br> <img width="732" height="743" alt="image" src="https://github.com/user-attachments/assets/28a4d863-c95f-41a6-a287-f9b7b891d710" />
+
 
 
 
